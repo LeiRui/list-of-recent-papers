@@ -8,7 +8,6 @@ Tasks:
 * Task 5 prediction
 * Task 6 anomaly detection
 * Task 7 motif discovery
-* Task 8 analysis
 
 Issues:
 * issue 1 data representation
