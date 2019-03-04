@@ -1,7 +1,7 @@
 已有从论文Timeseries data mining（2012）之后，2013-2018的重要会议的时间序列相关论文列表（见下文Paper List）。
 
 接下来，快速阅读每篇论文的Abstract和Introduction，按照“新问题”和“新方法”对论文进行分类。
-其中新方法的论文暂时放一边，重点关注新问题，记录2013-2018年间产生的新问题。
+其中新方法的论文暂时放一边，重点关注新问题，并记录2013-2018年间产生的新问题。
 * 新问题关注度 > 新方法关注度
 * 提出新问题的论文的工作量<提出新方法的论文的工作量，因为后者需要battle所有已有的方法
 
@@ -15,15 +15,15 @@
 7. 下文的结构
 
 # 分工
-芮(47+)：prediction(47+)
+芮：prediction(47+)
 
-康(38+): anomaly detection(26+), motif discovery(10+), analysis(2+)
+康: anomaly detection(26+), motif discovery(10+), analysis(2+)
 
-江(39+): query by content(16+), classfication(23+)
+江: query by content(16+), classfication(23+)
 
-安(31+): clustering(28+), segmentation(3+)
+安: clustering(28+), segmentation(3+)
 
-# 2013-2019新问题（updating）
+# 2013-2019新问题（under construction）
 1. 
 
 # Paper List
@@ -44,7 +44,7 @@
 ### similarity measure
 
 * TKDE 2016
-  Metric All-k-Nearest-Neighbor Search. 
+  Metric All-k-Nearest-Neighbor Search. 示例：新问题
 * NIPS 2017
   Soft-DTW: a Differentiable Loss Function for Time-Series
 * NIPS 2018
