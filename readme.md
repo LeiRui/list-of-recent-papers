@@ -14,7 +14,9 @@
 6. 总结我们的contributions
 7. 下文的结构
 
+# 分工
 芮(76+)：segmentation(3+), prediction(47+), anomaly detection(26+)
+
 康(79+)：query by content(16+), clustering(28+), classfication(23+), motif discovery(10+), analysis(2+)
 
 # 2013-2019新问题
