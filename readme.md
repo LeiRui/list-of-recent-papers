@@ -1,4 +1,5 @@
 论文[Timeseries data mining](https://dl.acm.org/citation.cfm?id=2379788)（2012）中提出：时间序列数据挖掘包括7个基本任务和3个基础问题：
+
 Tasks:
 * Task 1 query by content
 * Task 2 clustering
@@ -14,14 +15,14 @@ Issues:
 * issue 2 similarity measure
 * issue 3 indexing
 
-已有从论文[Timeseries data mining](https://dl.acm.org/citation.cfm?id=2379788)（2012）之后，2013-2018年的重要会议的时间序列相关论文列表（见下文Paper List）。
+现已有2013-2018年间重要会议的时间序列相关论文列表（见下文Paper List）。
 
-接下来，快速阅读每篇论文的Abstract和Introduction，按照“新问题”和“新方法”对论文进行分类。
+接下来需要我们快速阅读每篇论文的Abstract和Introduction，按照“新问题”和“新方法”对论文进行分类。
 其中新方法的论文暂时放一边，重点关注新问题，并记录2013-2018年间产生的新问题。
 * 新问题关注度 > 新方法关注度
 * 提出新问题的论文的工作量<提出新方法的论文的工作量，因为后者需要battle所有已有的方法
 
-此外，了解Introduction的典型结构有助于快速阅读：
+最后，了解一下Introduction的典型结构有助于快速阅读：
 1. 大量的时间序列产生
 2. 在工业时间序列中 工况需要分段
 3. 现在是人工来做这件事，也有一些其它方法，但是问题缺陷
