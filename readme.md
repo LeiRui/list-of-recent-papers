@@ -35,7 +35,7 @@
 7. 后文的结构
 
 # 分工
-芮：prediction(47+)
+芮: prediction(47+)
 
 康: anomaly detection(26+), motif discovery(10+), analysis(2+)
 
