@@ -48,14 +48,14 @@
     2. Reverse k Nearest Neighbor Search over Trajectories
     3. Fast Cosine Similarity Search in Binary Space with Angular Multi-Index Hashing
 
-## Task 2 clustering
+## Task 2 clustering (28+)
 
 ### survey
 
 * TODS 2013
   Data Stream Clustering: A Survey
 
-### representation (28+)
+### representation
 
 ### similarity measure
 
