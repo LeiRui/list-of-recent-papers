@@ -24,7 +24,7 @@
 安: clustering(28+), segmentation(3+)
 
 # 2013-2019新问题（under construction）
-1. 
+* 
 
 # Paper List
 * Task 1 query by content (16+)
