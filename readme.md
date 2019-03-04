@@ -1,6 +1,6 @@
 # Paper List
 
-## Task 1 query by content
+## Task 1 query by content (16+)
 
 ### representation
 
@@ -55,7 +55,7 @@
 * TODS 2013
   Data Stream Clustering: A Survey
 
-### representation
+### representation (28+)
 
 ### similarity measure
 
@@ -114,7 +114,7 @@ YADING: Fast Clustering of Large-Scale Time Series Data. 473-484 ★★★
     5. PurTreeClust: A purchase tree clustering algorithm for large-scale customer transaction data. 661-672
     6. ClEveR: Clustering events with high density of true-to-false occurrence ratio. 918-929
 
-## Task 3 classfication
+## Task 3 classfication (23+)
 
 ### representation
 
@@ -172,7 +172,7 @@ Nearest Subspace with Discriminative Regularization for Time Series Classificati
     7. Self-Adaptive Ensemble Classifier for Handling Complex Concept Drift
 
 
-## Task 4 segmentation
+## Task 4 segmentation (3+)
 
 ### representation
 
@@ -191,7 +191,7 @@ Nearest Subspace with Discriminative Regularization for Time Series Classificati
 
 
 
-## Task 5 prediction
+## Task 5 prediction (47+)
 
 ### representation
 
@@ -286,7 +286,7 @@ Link prediction in graph streams. 553-564
     1. Searchlight: Context-aware predictive Continuous Querying of moving objects in symbolic space. 687-698
     2. Predictive tree: An efficient index for predictive queries on road networks. 1215-1226
 
-## Task 6 anomaly detection
+## Task 6 anomaly detection (26+)
 
 ### survey
 
@@ -348,7 +348,7 @@ Streaming Anomaly Detection Using Randomized Matrix Sketching. 192-203 ★★★
     1. UAPD: Predicting Urban Anomalies from Spatial-Temporal Data
     2. Transfer Learning for Time Series Anomaly Detection
 
-## Task 7 motif discovery
+## Task 7 motif discovery (10+)
 
 ### representation
 
@@ -379,7 +379,7 @@ Quick-motif: An efficient and scalable framework for exact motif discovery. 579-
 * VLDB-2015
 Rare Time Series Motif Discovery from Unbounded Streams. 149-160
 
-## Task 8 analysis
+## Task 8 analysis (2+)
 
 ### representation
 
