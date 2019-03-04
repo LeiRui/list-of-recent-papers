@@ -1,4 +1,4 @@
-已有从论文Timeseries data mining（2012）之后，2013-2018的重要会议的时间序列相关论文列表（见下文Paper List）。
+已有从论文[Timeseries data mining](https://dl.acm.org/citation.cfm?id=2379788)（2012）之后，2013-2018年的重要会议的时间序列相关论文列表（见下文Paper List）。
 
 接下来，快速阅读每篇论文的Abstract和Introduction，按照“新问题”和“新方法”对论文进行分类。
 其中新方法的论文暂时放一边，重点关注新问题，并记录2013-2018年间产生的新问题。
@@ -12,7 +12,7 @@
 4. 这件事情non-trivial 有难度
 5. 我们的方法怎么对应上面的non-trivial 一些结论 在数据集上验证
 6. 总结我们的contributions
-7. 下文的结构
+7. 后文的结构
 
 # 分工
 芮：prediction(47+)
