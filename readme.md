@@ -1,6 +1,16 @@
 # Paper List
 
 ## Task 1 query by content (16+)
+## Task 2 clustering (28+)
+## Task 3 classfication (23+)
+## Task 4 segmentation (3+)
+## Task 5 prediction (47+)
+## Task 6 anomaly detection (26+)
+## Task 7 motif discovery (10+)
+## Task 8 analysis (2+)
+
+---
+## Task 1 query by content (16+)
 
 ### representation
 
