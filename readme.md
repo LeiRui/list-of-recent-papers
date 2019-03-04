@@ -15,11 +15,15 @@
 7. 下文的结构
 
 # 分工
-芮(76+)：segmentation(3+), prediction(47+), anomaly detection(26+)
+芮(47+)：prediction(47+)
 
-康(79+)：query by content(16+), clustering(28+), classfication(23+), motif discovery(10+), analysis(2+)
+康(38+): anomaly detection(26+), motif discovery(10+), analysis(2+)
 
-# 2013-2019新问题
+江(39+): query by content(16+), classfication(23+)
+
+安(31+): clustering(28+), segmentation(3+)
+
+# 2013-2019新问题（updating）
 1. 
 
 # Paper List
