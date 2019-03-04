@@ -1,3 +1,18 @@
+论文[Timeseries data mining](https://dl.acm.org/citation.cfm?id=2379788)（2012）中提出：时间序列数据挖掘包括7个基本任务和3个基础问题：
+* Task 1 query by content
+* Task 2 clustering
+* Task 3 classfication
+* Task 4 segmentation
+* Task 5 prediction
+* Task 6 anomaly detection
+* Task 7 motif discovery
+* Task 8 analysis
+
+
+* issue 1 data representation
+* issue 2 similarity measure
+* issue 3 indexing
+
 已有从论文[Timeseries data mining](https://dl.acm.org/citation.cfm?id=2379788)（2012）之后，2013-2018年的重要会议的时间序列相关论文列表（见下文Paper List）。
 
 接下来，快速阅读每篇论文的Abstract和Introduction，按照“新问题”和“新方法”对论文进行分类。
