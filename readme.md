@@ -46,8 +46,7 @@
 * TKDE 2018
     1. Non-Overlapping Subsequence Matching of Stream Synopses
     2. Reverse k Nearest Neighbor Search over Trajectories
-
-  Fast Cosine Similarity Search in Binary Space with Angular Multi-Index Hashing
+    3. Fast Cosine Similarity Search in Binary Space with Angular Multi-Index Hashing
 
 ## Task 2 clustering
 
