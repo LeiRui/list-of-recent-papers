@@ -45,6 +45,11 @@
 安: clustering(28+), segmentation(3+)
 
 # 2013-2019新问题（under construction）
+* Similarity Measure Selection for Clustering Time Series Databases：对时间序列数据集进行聚类分析时，自动选择最合适的相似性度量方法；
+* Interpretable Categorization of Heterogeneous Time Series Data：多种类多维度时间序列的解释性分类；
+* Developing a Low Dimensional Patient Class Profile in Accordance to Their Respiration-Induced Tumor Motion：利用肿瘤数据（由时间序列组成）创建低维的病人档案（包含病人个人信息、生命体征以及化验或检查结果）；
+* Local Search Methods for k-Means with Outliers：带有异常值的k-Means的本地搜索；
+* Density Based Clustering over Location Based Services：LBS（定位服务）基于密度的聚类；
 * 
 
 # Paper List
@@ -95,7 +100,7 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TODS 2013|Data Stream Clustering: A Survey|
+|TODS 2013|Data Stream Clustering: A Survey|新方法|
 
 ### representation
 
@@ -103,39 +108,39 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2016|Similarity Measure Selection for Clustering Time Series Databases||
-|TKDE 2018|Similarity Metrics for SQL Query Clustering||
-|TODS 2017|Fast and Accurate Time-Series Clustering||
+|TKDE 2016|Similarity Measure Selection for Clustering Time Series Databases|新问题|
+|TKDE 2018|Similarity Metrics for SQL Query Clustering|新方法|
+|TODS 2017|Fast and Accurate Time-Series Clustering|新方法|
 
 ### indexing
 ### MORE
 
 |Source|Title|Classification|
 |---|---|---|
-|DASFAA-2018|Scalable Active Constrained Clustering for Temporal Data||
-|ECML PKDD-2017|Identifying Representative Load Time Series for Load Flow Calculations||
-|ICDM-2017|Distance and Density Clustering for Time Series Data||
-|PODS-2018|Subtrajectory Clustering: Models and Algorithms	PODS-2018||
-|SDM-2018|Interpretable Categorization of Heterogeneous Time Series Data||
-|SIGIR-2018|CA-LSTM: Search Task Identification with Context Attention based LSTM||
-|SIGKDD-2017|(Research Track最佳论文Runner Up)Toeplitz Inverse Covariance-Based Clustering of Multivariate Time Series Data||
-|SIGKDD-2017|Effective and Real-time In-App Activity Analysis in Encrypted Internet Traffic Streams||
-|SIGKDD-2017|Patient Subtyping via Time-Aware LSTM Networks||
-|SIGKDD-2017|Robust Spectral Clustering for Noisy Data||
-|SIGKDD-2017|Clustering Individual Transactional Data for Masses of Users||
-|SIGKDD-2017|KATE: K-Competitive Autoencoder for Text||
-|VLDB-2018|Clustering Stream Data by Exploring the Evolution of Density Mountain||
-|VLDB-2017|Developing a Low Dimensional Patient Class Profile in Accordance to Their Respiration-Induced Tumor Motion||
-|VLDB-2017|NG-DBSCAN: Scalable Density-Based Clustering for Arbitrary Data. 157-168||
-|VLDB-2017|Local Search Methods for k-Means with Outliers. 757-768||
-|VLDB-2017|Dimensions Based Data Clustering and Zone Maps. 1622-1633||
-|VLDB-2015|YADING: Fast Clustering of Large-Scale Time Series Data. 473-484 ★★★||
-|ICDE-2017|Density Based Clustering over Location Based Services. 461-469||
-|ICDE-2017|A model-based approach for text clustering with outlier detection. 625-636||
-|ICDE-2017|Streaming spectral clustering. 637-648||
-|ICDE-2017|Accelerating large scale centroid-based clustering with locality sensitive hashing. 649-660||
-|ICDE-2017|PurTreeClust: A purchase tree clustering algorithm for large-scale customer transaction data. 661-672||
-|ICDE-2017|ClEveR: Clustering events with high density of true-to-false occurrence ratio. 918-929||
+|DASFAA-2018|Scalable Active Constrained Clustering for Temporal Data|新方法|
+|ECML PKDD-2017|Identifying Representative Load Time Series for Load Flow Calculations|新方法|
+|ICDM-2017|Distance and Density Clustering for Time Series Data|新方法|
+|PODS-2018|Subtrajectory Clustering: Models and Algorithms|新方法|
+|SDM-2018|Interpretable Categorization of Heterogeneous Time Series Data|新问题|
+|SIGIR-2018|CA-LSTM: Search Task Identification with Context Attention based LSTM|新方法|
+|SIGKDD-2017|(Research Track最佳论文Runner Up)Toeplitz Inverse Covariance-Based Clustering of Multivariate Time Series Data|新方法|
+|SIGKDD-2017|Effective and Real-time In-App Activity Analysis in Encrypted Internet Traffic Streams|新方法|
+|SIGKDD-2017|Patient Subtyping via Time-Aware LSTM Networks|新方法|
+|SIGKDD-2017|Robust Spectral Clustering for Noisy Data|新方法|
+|SIGKDD-2017|Clustering Individual Transactional Data for Masses of Users|新方法|
+|SIGKDD-2017|KATE: K-Competitive Autoencoder for Text|新方法|
+|VLDB-2018|Clustering Stream Data by Exploring the Evolution of Density Mountain|新方法|
+|VLDB-2017|Developing a Low Dimensional Patient Class Profile in Accordance to Their Respiration-Induced Tumor Motion|新问题|
+|VLDB-2017|NG-DBSCAN: Scalable Density-Based Clustering for Arbitrary Data. 157-168|新方法|
+|VLDB-2017|Local Search Methods for k-Means with Outliers. 757-768|新问题|
+|VLDB-2017|Dimensions Based Data Clustering and Zone Maps. 1622-1633|新方法|
+|VLDB-2015|YADING: Fast Clustering of Large-Scale Time Series Data. 473-484 ★★★|新方法|
+|ICDE-2016|Streaming spectral clustering. 637-648|新方法|
+|ICDE-2017|Density Based Clustering over Location Based Services. 461-469|新问题|
+|ICDE-2017|A model-based approach for text clustering with outlier detection. 625-636|新方法|
+|ICDE-2017|Accelerating large scale centroid-based clustering with locality sensitive hashing. 649-660|新方法|
+|ICDE-2017|PurTreeClust: A purchase tree clustering algorithm for large-scale customer transaction data. 661-672|新方法|
+|ICDE-2017|ClEveR: Clustering events with high density of true-to-false occurrence ratio. 918-929|新方法|
 
 ## Task 3 classfication (23+)
 
@@ -184,8 +189,8 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2017|Efficient Pattern-Based Aggregation on Sequence Data.||
-|TKDE 2014|An Adaptive Approach to Real-Time Aggregate Monitoring With Differential Privacy||
+|TKDE 2017|Efficient Pattern-Based Aggregation on Sequence Data.|新方法|
+|TKDE 2014|An Adaptive Approach to Real-Time Aggregate Monitoring With Differential Privacy|新方法|
 
 ### similarity measure
 
@@ -193,7 +198,7 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2018|BEATS: Blocks of Eigenvalues Algorithm for Time Series Segmentation.||
+|TKDE 2018|BEATS: Blocks of Eigenvalues Algorithm for Time Series Segmentation.|新方法|
 
 
 
