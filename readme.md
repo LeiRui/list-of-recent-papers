@@ -71,28 +71,28 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2016|Metric All-k-Nearest-Neighbor Search||
-|NIPS 2017|Soft-DTW: a Differentiable Loss Function for Time-Series||
-|NIPS 2018|Autowarp: Learning a Warping Distance from Unlabeled Time Series Using Sequence Autoencoders||
+|TKDE 2016|Metric All-k-Nearest-Neighbor Search|新问题：任意测度下的AkNN|
+|NIPS 2017|Soft-DTW: a Differentiable Loss Function for Time-Series|新方法|
+|NIPS 2018|Autowarp: Learning a Warping Distance from Unlabeled Time Series Using Sequence Autoencoders|新方法|
 
 ### indexing
 
 ### MORE
 |Source|Title|Classification|
 |---|---|---|
-|SIGIR-2018|CA-LSTM: Search Task Identification with Context Attention based LSTM||
-|SIGMOD-2018|Qetch: Time Series Querying with Expressive Sketches||
-|SIGMOD-2017|Approximate Query Processing: No Silver Bullet||
-|SIGMOD-2017|Approximate Query Engines: Commercial Challenges and Research Opportunities||
-|SIGMOD-2017|Approximate Query Processing for Interactive Data Science||
-|VLDB-2017|DITIR: Distributed Index for High Throughput Trajectory Insertion and Real-time Temporal Range Query||
-|DASFAA-2018|Time-Based Trajectory Data Partitioning for Efficient Range Query||
-|ICDE-2017|Tracking Matrix Approximation over Distributed Sliding Windows. 833-844||
-|ICDE-2015|Predictive tree: An efficient index for predictive queries on road networks. 1215-1226||
-|TKDE 2017|Measuring Concentration of Distances—An Effective and Efficient Empirical Index.||
-|TKDE 2018|Non-Overlapping Subsequence Matching of Stream Synopses||
-|TKDE 2018|Reverse k Nearest Neighbor Search over Trajectories||
-|TKDE 2018|Fast Cosine Similarity Search in Binary Space with Angular Multi-Index Hashing||
+|SIGIR-2018|CA-LSTM: Search Task Identification with Context Attention based LSTM|新方法|
+|SIGMOD-2018|Qetch: Time Series Querying with Expressive Sketches|新方法|
+|SIGMOD-2017|Approximate Query Processing: No Silver Bullet|survey|
+|SIGMOD-2017|Approximate Query Engines: Commercial Challenges and Research Opportunities|Keynote|
+|SIGMOD-2017|Approximate Query Processing for Interactive Data Science|Keynote|
+|VLDB-2017|DITIR: Distributed Index for High Throughput Trajectory Insertion and Real-time Temporal Range Query|新方法|
+|DASFAA-2018|Time-Based Trajectory Data Partitioning for Efficient Range Query|新方法|
+|ICDE-2017|Tracking Matrix Approximation over Distributed Sliding Windows. 833-844|几乎新问题（1）：分布式的滑动窗口中近似矩阵计算|
+|ICDE-2015|Predictive tree: An efficient index for predictive queries on road networks. 1215-1226|新方法|
+|TKDE 2017|Measuring Concentration of Distances—An Effective and Efficient Empirical Index.|新方法|
+|TKDE 2018|Non-Overlapping Subsequence Matching of Stream Synopses|新问题:随机长度直方图化流的子序列匹配|
+|TKDE 2018|Reverse k Nearest Neighbor Search over Trajectories|新问题:对轨迹做逆KNN|
+|TKDE 2018|Fast Cosine Similarity Search in Binary Space with Angular Multi-Index Hashing|新方法|
 
 ## Task 2 clustering (28+)
 
@@ -143,14 +143,16 @@
 |ICDE-2017|ClEveR: Clustering events with high density of true-to-false occurrence ratio. 918-929|新方法|
 
 ## Task 3 classfication (23+)
-
+注：时间序列分类是一个定义比较明确的问题，由此衍生出完全新问题的可能性很小。有些所谓的新问题只是在特定领域的运用。  
+对于没有在标题中概括方法的研究，分类一栏额外给出了对其方法的概括方便进一步分类。
+有一部分工作与其说是新方法不如说是老方法在某些特定领域的使用，这些被分类为“新方法？”。
 ### representation
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2016|Classifying Time Series Using Local Descriptors with Hybrid Sampling||
-|TKDE 2015|Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles.||
-|TKDE 2014|Probabilistic Sequence Translation-Alignment Model for Time-Series Classification||
+|TKDE 2016|Classifying Time Series Using Local Descriptors with Hybrid Sampling|新方法|
+|TKDE 2015|Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles.|新方法|
+|TKDE 2014|Probabilistic Sequence Translation-Alignment Model for Time-Series Classification|新方法|
 
 ### similarity measure
 
@@ -160,26 +162,26 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|SIGKDD-2017|Effective and Real-time In-App Activity Analysis in Encrypted Internet Traffic Streams||
-|ICDE-2017|ACTS: An Active Learning Method for Time Series Classification||
-|ICDE-2017|Time Series Classification by Sequence Learning in All-Subsequence Space||
-|VLDB-2017|Effects of Varying Sampling Frequency on the Analysis of Continuous ECG Data Streams||
-|SDM-2018|Interpretable Categorization of Heterogeneous Time Series Data||
-|SDM-2018|Evolving Separating References for Time Series Classification||
-|SDM-2018|Classifying Multivariate Time Series by Learning Sequence-level Discriminative Patterns||
-|SDM-2018|Brain EEG Time Series Selection: A Novel Graph-Based Approach for Classification||
-|ICDM-2017|Linear Time Complexity Time Series Classification with Bag-of-Pattern-Features||
-|EDBT-2018|Extracting Statistical Graph Features for Accurate and Efficient Time Series Classification||
-|DASFAA-2018|Nearest Subspace with Discriminative Regularization for Time Series Classification||
-|CIKM-2017|Fast and Accurate Time Series Classification with WEASEL||
-|CIKM-2017|Does That Mean You're Happy?: RNN-based Modeling of User Interaction Sequences to Detect Good Abandonment||
-|ECML PKDD-2017|Behavioral Constraint Template-Based Sequence Classification||
-|ECML PKDD-2017|Cost Sensitive Time-Series Classification||
-|ECML PKDD-2017|Efficient Temporal Kernels Between Feature Sets for Time Series Classification||
-|ECML PKDD-2017|Analyzing Granger Causality in Climate Data with Time Series Classification Methods||
-|ECML PKDD-2017|End-to-end Learning of Deep Spatio-temporal Representations for Satellite Image Time Series Classification||
-|ECML PKDD-2017|Temporal and spatial approaches for land cover classification||
-|ECML PKDD-2017|Self-Adaptive Ensemble Classifier for Handling Complex Concept Drift||
+|SIGKDD-2017|Effective and Real-time In-App Activity Analysis in Encrypted Internet Traffic Streams|新方法:分窗+抽特征+聚类+随机森林|
+|ICDE-2017|ACTS: An Active Learning Method for Time Series Classification|几乎新问题（2）：对TSC使用AL|
+|ICDE-2017|Time Series Classification by Sequence Learning in All-Subsequence Space|新方法：在子序列空间中使用梯度下降找到最具区分力的子序列|
+|VLDB-2017|Effects of Varying Sampling Frequency on the Analysis of Continuous ECG Data Streams|新方法|
+|SDM-2018|Interpretable Categorization of Heterogeneous Time Series Data|新方法：使用扩展的决策树|
+|SDM-2018|Evolving Separating References for Time Series Classification|新方法|
+|SDM-2018|Classifying Multivariate Time Series by Learning Sequence-level Discriminative Patterns|新方法|
+|SDM-2018|Brain EEG Time Series Selection: A Novel Graph-Based Approach for Classification|新问题？：脑电图数据选择|
+|ICDM-2017|Linear Time Complexity Time Series Classification with Bag-of-Pattern-Features|新方法(注：优于DTW）|
+|EDBT-2018|Extracting Statistical Graph Features for Accurate and Efficient Time Series Classification|新方法：时间序列转为图，在图上抽特征|
+|DASFAA-2018|Nearest Subspace with Discriminative Regularization for Time Series Classification|新方法：降维+近邻子空间分类+模型编译|
+|CIKM-2017|Fast and Accurate Time Series Classification with WEASEL|滑动窗口抽特征+特征选择+逻辑回归|
+|CIKM-2017|Does That Mean You're Happy?: RNN-based Modeling of User Interaction Sequences to Detect Good Abandonment|新问题：用TSC解决goog abandonment|
+|ECML PKDD-2017|Behavioral Constraint Template-Based Sequence Classification|新方法|
+|ECML PKDD-2017|Cost Sensitive Time-Series Classification|新方法：shaplet+学习FP，FN各自的权重|
+|ECML PKDD-2017|Efficient Temporal Kernels Between Feature Sets for Time Series Classification|新方法|
+|ECML PKDD-2017|Analyzing Granger Causality in Climate Data with Time Series Classification Methods|新方法？|
+|ECML PKDD-2017|End-to-end Learning of Deep Spatio-temporal Representations for Satellite Image Time Series Classification|新方法？|
+|ECML PKDD-2017|Temporal and spatial approaches for land cover classification|新方法？|
+|ECML PKDD-2017|Self-Adaptive Ensemble Classifier for Handling Complex Concept Drift|新方法|
 
 
 ## Task 4 segmentation (3+)
