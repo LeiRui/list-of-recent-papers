@@ -273,7 +273,7 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2014|Outlier Detection for Temporal Data: A Survey||
+|TKDE 2014|Outlier Detection for Temporal Data: A Survey|survey|
 
 ### representation
 
@@ -281,37 +281,38 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|NIPS 2018|Precision and Recall for Time Series||
+|NIPS 2018|Precision and Recall for Time Series|新问题：传统的异常检测都是基于“点”的，如何对于“异常片段”进行度量？本文介绍了一种新的measurement。|
 
 ### indexing
+
 ### MORE
 
 |Source|Title|Classification|
 |---|---|---|
-|SIGKDD-2017|Anomaly Detection in Streams with Extreme Value Theory||
-|SIGKDD-2017|Let's See Your Digits: Anomalous-State Detection using Benford's Law||
-|SIGKDD-2017|Finding Precursors to Anomalous Drop in Airspeed During a Flight's Take-off||
-|SIGKDD-2017|Distributed Local Outlier Detection in Big Data||
-|SIGKDD-2017|REMIX: Automated Exploration for Interactive Outlier Detection||
-|SIGKDD-2017|Scalable Top-n Local Outlier Detection||
-|SIGKDD-2017|Compass: Spatio Temporal Sentiment Analysis of US Election||
-|SIGMOD-2018|TcpRT: Instrument and Diagnostic Analysis System for Service Quality of Cloud Databases at Massive Scale in Real-time||
-|SIGMOD-2018|Auto-Detect: Data-Driven Error Detection in Tables||
-|SIGMOD-2018|RushMon: Real-time Isolation Anomalies Monitoring||
-|ICDE-2018|Improving Quality of Observational Streaming Medical Data by Using Long Short-Term Memory Networks (LSTMs)||
-|ICDE-2017|LSHiForest: A Generic Framework for Fast Tree Isolation Based Ensemble Anomaly Analysis. 983-994||
-|VLDB-2017|Time Series Data Cleaning: From Anomaly Detection to Anomaly Repairing||
-|VLDB-2017|Local Search Methods for k-Means with Outliers||
-|VLDB-2016|Streaming Anomaly Detection Using Randomized Matrix Sketching. 192-203 ★★★||
-|SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection||
-|SDM-2018|StreamCast: Fast and Online Mining of Power Grid Time Sequences||
-|SDM-2018|Outlier Detection over Distributed Trajectory Streams||
-|ICDM-2017|Matrix Profile VII: Time Series Chains: A New Primitive for Time Series Data Mining (Best Student Paper Award)||
-|ICDM-2017|Dependency Anomaly Detection for Heterogeneous Time Series: A Granger-Lasso Approach||
-|CIKM-2017|Efficient Discovery of Abnormal Event Sequences in Enterprise Security Systems||
-|CIKM-2017|Anomaly Detection in Dynamic Networks using Multi-view Time-Series Hypersphere Learning||
-|ECML PKDD-2017|UAPD: Predicting Urban Anomalies from Spatial-Temporal Data||
-|ECML PKDD-2017|Transfer Learning for Time Series Anomaly Detection||
+|SIGKDD-2017|Anomaly Detection in Streams with Extreme Value Theory|新方法：在这里，我们提出了一种基于极值理论检测流单变量时间序列中的异常值的新方法|
+|SIGKDD-2017|Let's See Your Digits: Anomalous-State Detection using Benford's Law|新方法：发现异常数据出现前数值型数据的一些规律|
+|SIGKDD-2017|Finding Precursors to Anomalous Drop in Airspeed During a Flight's Take-off|新问题、领域强相关：通过挖掘历史飞行数据来开发决策支持工具，以主动识别和管理飞行中遇到的高风险情况|
+|SIGKDD-2017|Distributed Local Outlier Detection in Big Data|新方法：局部离群因子方法（Local Outlier Factor (LOF) method）|
+|SIGKDD-2017|REMIX: Automated Exploration for Interactive Outlier Detection|新问题（在新的场景下）：在“交互式环境”中解决异常值检测问题的系统。|
+|SIGKDD-2017|Scalable Top-n Local Outlier Detection|新方法：第一个可扩展的Top-N本地离群值检测方法|
+|SIGKDD-2017|Compass: Spatio Temporal Sentiment Analysis of US Election|新问题：在许多应用场景中，希望发现社交媒体数据基于地理和/或时间分区的模式和趋势，进行时空情感分析。|
+|SIGMOD-2018|TcpRT: Instrument and Diagnostic Analysis System for Service Quality of Cloud Databases at Massive Scale in Real-time|新系统|
+|SIGMOD-2018|Auto-Detect: Data-Driven Error Detection in Tables|新方法：检测SQL中的错误|
+|SIGMOD-2018|RushMon: Real-time Isolation Anomalies Monitoring|新方法：系统隔离机制不一致性的检测|
+|ICDE-2018|Improving Quality of Observational Streaming Medical Data by Using Long Short-Term Memory Networks (LSTMs)|新方法：将LSTM和编解码器用在医疗领域的异常检测|
+|ICDE-2017|LSHiForest: A Generic Framework for Fast Tree Isolation Based Ensemble Anomaly Analysis. 983-994|新方法|
+|VLDB-2017|Time Series Data Cleaning: From Anomaly Detection to Anomaly Repairing|新方法：宋韶旭老师工作|
+|VLDB-2017|Local Search Methods for k-Means with Outliers|新问题：存在异常值的情况下k均值聚类的问题。|
+|VLDB-2016|Streaming Anomaly Detection Using Randomized Matrix Sketching. 192-203|新方法|
+|SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection|老问题-新假设：观察时间序列中的潜在成分，放宽了已有方法的假设约束|
+|SDM-2018|StreamCast: Fast and Online Mining of Power Grid Time Sequences|新问题-领域相关：电力预测|
+|SDM-2018|Outlier Detection over Distributed Trajectory Streams|新问题：第一个分布式轨迹流上的异常检测|
+|ICDM-2017|Matrix Profile VII: Time Series Chains: A New Primitive for Time Series Data Mining (Best Student Paper Award)|新问题：对于文本序列数据，引入了一个强大的时间序列链定义，以及一个可扩展的算法|
+|ICDM-2017|Dependency Anomaly Detection for Heterogeneous Time Series: A Granger-Lasso Approach|新问题：在异常检测中引入了时间因果依赖性的考虑，并针对符合该假设的数据集进行实验|
+|CIKM-2017|Efficient Discovery of Abnormal Event Sequences in Enterprise Security Systems|新问题：入侵检测系统中低级异构事件的研究|
+|CIKM-2017|Anomaly Detection in Dynamic Networks using Multi-view Time-Series Hypersphere Learning|新方法|
+|ECML PKDD-2017|UAPD: Predicting Urban Anomalies from Spatial-Temporal Data|新框架：城市异常预测（UAPD）框架|
+|ECML PKDD-2017|Transfer Learning for Time Series Anomaly Detection|新问题：时间序列异常检测中使用**迁移学习**|
 
 ## Task 7 motif discovery (10+)
 
@@ -324,16 +325,16 @@
 ### MORE
 |Source|Title|Classification|
 |---|---|---|
-|SIGKDD-2017|Matrix Profile V: A Generic Technique to  Incorporate Domain Knowledge into Motif Discovery ||
-|SIGKDD-2017|Contextual Motifs: Increasing the Utility of Motifs using Contextual Data||
-|SIGMOD-2018|Matrix Profile X: VALMOD - Scalable Discovery of Variable-Length Motifs in Data Series||
-|SIGMOD-2018|VALMOD: A Suite for Easy and Exact Detection of Variable Length Motifs in Data Series||
-|ICDM-2017|IterativE Grammar-Based Framework for Discovering Variable-Length Time Series Motifs||
-|ICDM-2017|Efficient discovery of time series motifs with large length range in million scale time series||
-|ICDM-2017|Matrix Profile VI: Meaningful Multidimensional Motif Discovery||
-|ICDE-2016|Fast motif discovery in short sequences. 1158-1169||
-|ICDE-2015|Quick-motif: An efficient and scalable framework for exact motif discovery. 579-590||
-|VLDB-2015|Rare Time Series Motif Discovery from Unbounded Streams. 149-160||
+|SIGKDD-2017|Matrix Profile V: A Generic Technique to  Incorporate Domain Knowledge into Motif Discovery |新方法|
+|SIGKDD-2017|Contextual Motifs: Increasing the Utility of Motifs using Contextual Data|新假设：在motif中引入额外的上下文信息|
+|SIGMOD-2018|Matrix Profile X: VALMOD - Scalable Discovery of Variable-Length Motifs in Data Series|新方法：检测可变长度的motif|
+|SIGMOD-2018|VALMOD: A Suite for Easy and Exact Detection of Variable Length Motifs in Data Series|上文的demo|
+|ICDM-2017|IterativE Grammar-Based Framework for Discovering Variable-Length Time Series Motifs|新方法|
+|ICDM-2017|Efficient discovery of time series motifs with large length range in million scale time series|新方法：检测可变长度的motif|
+|ICDM-2017|Matrix Profile VI: Meaningful Multidimensional Motif Discovery|新方法|
+|ICDE-2016|Fast motif discovery in short sequences. 1158-1169|新问题：如何在大数据场景下进行motif检测|
+|ICDE-2015|Quick-motif: An efficient and scalable framework for exact motif discovery. 579-590|新问题：以前工作不能同时进行相关性计算（fast correlation computations ）和 剪枝（prune subsequence pairs）|
+|VLDB-2015|Rare Time Series Motif Discovery from Unbounded Streams. 149-160|新问题：对于motif，加上了stream的场景|
 
 ## Task 8 analysis (2+)
 
@@ -343,10 +344,10 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2018|Diverse Relevance Feedback for Time Series with Autoencoder Based Summarizations||
+|TKDE 2018|Diverse Relevance Feedback for Time Series with Autoencoder Based Summarizations|新方法|
 
 ### indexing
 
 |Source|Title|Classification|
 |---|---|---|
-|TKDE 2017|Time Series Management Systems: A Survey.||
+|TKDE 2017|Time Series Management Systems: A Survey.|survey：对时序系统的总结|
