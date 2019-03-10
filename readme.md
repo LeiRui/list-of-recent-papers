@@ -68,7 +68,7 @@
 ## prediction
 * a more accurate characterization of data dynamics；capturing evolution patterns of hidden factors
 * industrial large-scale spatio-temporal prediction problems with both accuracy and flexibility requirements；large-scale online taxicab industries, predict the Unit Original Taxi Demand (UOTD), which refers to the number of taxi-calling requirements submitted per unit time (e.g., every hour) and per unit region (e.g., each POI); To accurately predict UOTD while remaining flexible to scenario changes: In the fast-developing online taxicab industry, application and key factor changes due to new regulations or business strategies are common and frequent.
-* diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data; The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.
+* diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data; The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.
 * Tracking and forecasting the dynamics in crowdfunding instead of a final result; A special goal is to forecast the funding amount for a given campaign and its perks in the future days
 * perform anomaly detection and forecasting robustly without human intervention / automated algorithm for anomaly detection and/or forecasting; relax restrictive assumptions
 * online or streaming setting
