@@ -45,12 +45,60 @@
 安: clustering(28+), segmentation(3+)
 
 # 2013-2019新问题（under construction）
+## clustering & segmentation
 * Similarity Measure Selection for Clustering Time Series Databases：对时间序列数据集进行聚类分析时，自动选择最合适的相似性度量方法；
 * Interpretable Categorization of Heterogeneous Time Series Data：多种类多维度时间序列的解释性分类；
 * Developing a Low Dimensional Patient Class Profile in Accordance to Their Respiration-Induced Tumor Motion：利用肿瘤数据（由时间序列组成）创建低维的病人档案（包含病人个人信息、生命体征以及化验或检查结果）；
 * Local Search Methods for k-Means with Outliers：带有异常值的k-Means的本地搜索；
 * Density Based Clustering over Location Based Services：LBS（定位服务）基于密度的聚类；
-* 
+
+## query by content
+* 任意测度下的AkNN
+* 分布式的滑动窗口中近似矩阵计算 (几乎新问题)
+* 随机长度直方图化流的子序列匹配
+* 对轨迹做逆KNN
+
+## classfication
+注：时间序列分类是一个定义比较明确的问题，由此衍生出完全新问题的可能性很小。有些所谓的新问题只是在特定领域的运用。
+对于没有在标题中概括方法的研究，分类一栏额外给出了对其方法的概括方便进一步分类。 有一部分工作与其说是新方法不如说是老方法在某些特定领域的使用，这些被分类为“新方法？”。
+* 对TSC使用AL (几乎新问题)
+* 脑电图数据选择
+* 用TSC解决goog abandonment
+
+## prediction
+* a more accurate characterization of data dynamics；capturing evolution patterns of hidden factors
+* industrial large-scale spatio-temporal prediction problems with both accuracy and flexibility requirements；large-scale online taxicab industries, predict the Unit Original Taxi Demand (UOTD), which refers to the number of taxi-calling requirements submitted per unit time (e.g., every hour) and per unit region (e.g., each POI); To accurately predict UOTD while remaining flexible to scenario changes: In the fast-developing online taxicab industry, application and key factor changes due to new regulations or business strategies are common and frequent.
+* diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data; The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.
+* Tracking and forecasting the dynamics in crowdfunding instead of a final result; A special goal is to forecast the funding amount for a given campaign and its perks in the future days
+* perform anomaly detection and forecasting robustly without human intervention / automated algorithm for anomaly detection and/or forecasting; relax restrictive assumptions
+* online or streaming setting
+* Using Weakly Labeled Time Series to Predict Outcomes
+* Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned
+* Space-Time series forecasting / Time series exhibiting spatial dependencies / spatial temporal
+* constructing a set of predictor variables that can be used in a forecast model / multivariate time series forecasting
+* detection and prediction of events and trajectories in aerial and maritime transportation
+
+## anomaly detection
+* 传统的异常检测都是基于“点”的，如何对于“异常片段”进行度量？本文介绍了一种新的measurement。
+* 领域强相关：通过挖掘历史飞行数据来开发决策支持工具，以主动识别和管理飞行中遇到的高风险情况
+* （在新的场景下）：在“交互式环境”中解决异常值检测问题的系统
+* 在许多应用场景中，希望发现社交媒体数据基于地理和/或时间分区的模式和趋势，进行时空情感分析
+* 存在异常值的情况下k均值聚类的问题
+* 老问题-新假设：观察时间序列中的潜在成分，放宽了已有方法的假设约束
+* 领域相关：电力预测
+* 第一个分布式轨迹流上的异常检测
+* 对于文本序列数据，引入了一个强大的时间序列链定义，以及一个可扩展的算法
+* 在异常检测中引入了时间因果依赖性的考虑，并针对符合该假设的数据集进行实验
+* 入侵检测系统中低级异构事件的研究
+* 时间序列异常检测中使用迁移学习
+
+## motif discovery
+* 新假设：在motif中引入额外的上下文信息
+* 如何在大数据场景下进行motif检测
+* 以前工作不能同时进行相关性计算（fast correlation computations ）和 剪枝（prune subsequence pairs）
+* 对于motif，加上了stream的场景
+
+
 
 # Paper List
 * Task 1 query by content (16+)
@@ -85,6 +133,8 @@
 |SIGMOD-2017|Approximate Query Processing: No Silver Bullet|survey|
 |SIGMOD-2017|Approximate Query Engines: Commercial Challenges and Research Opportunities|Keynote|
 |SIGMOD-2017|Approximate Query Processing for Interactive Data Science|Keynote|
+|SIGMOD-2015|SMiLer: A Semi-Lazy Time Series Prediction System for Sensors|新方法|
+|VLDB-2018|Locality-Sensitive Hashing for Earthquake Detection: A Case Study Scaling Data-Driven Science|新方法|
 |VLDB-2017|DITIR: Distributed Index for High Throughput Trajectory Insertion and Real-time Temporal Range Query|新方法|
 |DASFAA-2018|Time-Based Trajectory Data Partitioning for Efficient Range Query|新方法|
 |ICDE-2017|Tracking Matrix Approximation over Distributed Sliding Windows. 833-844|几乎新问题（1）：分布式的滑动窗口中近似矩阵计算|
@@ -93,6 +143,7 @@
 |TKDE 2018|Non-Overlapping Subsequence Matching of Stream Synopses|新问题:随机长度直方图化流的子序列匹配|
 |TKDE 2018|Reverse k Nearest Neighbor Search over Trajectories|新问题:对轨迹做逆KNN|
 |TKDE 2018|Fast Cosine Similarity Search in Binary Space with Angular Multi-Index Hashing|新方法|
+
 
 ## Task 2 clustering (28+)
 
@@ -210,7 +261,7 @@
 
 |Source|Title|Classification|
 |---|---|---|
-|NIPS 2018|Deep State Space Models for Time Series Forecasting||
+|NIPS 2018|Deep State Space Models for Time Series Forecasting|新方法|a novel approach to probabilistic time series forecasting that combines state space models with deep learning|
 
 ### similarity measure
 
@@ -218,54 +269,53 @@
 
 ### MORE
 
-|Source|Title|Classification|
-|---|---|---|
-|SIGKDD-2017|Incremental Dual-memory LSTM in Land Cover Prediction||
-|SIGKDD-2017|Mixture Factorized Ornstein-Uhlenbeck Processes for Time-Series Forecasting||
-|SIGKDD-2017|Retrospective Higher-Order Markov Processes for User Trails||
-|SIGKDD-2017|The Simpler The Better: A Unified Approach to Predicting Original Taxi Demands on Large-Scale Online Platforms||
-|SIGKDD-2017|Stock Price Prediction via Discovering Multi-Frequency Trading Patterns||
-|SIGKDD-2017|Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks||
-|SIGKDD-2017|Tracking the Dynamics in Crowdfunding||
-|SIGKDD-2017|DeepMood: Modeling Mobile Phone Typing Dynamics for Mood Detection||
-|SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection||
-|SDM-2018|StreamCast: Fast and Online Mining of Power Grid Time Sequences||
-|SDM-2018|Who will Attend This Event Together? Event Attendance Prediction via Deep LSTM Networks||
-|SIGMOD-2018|Spatiotemporal Traffic Volume Estimation Model Based on GPS Samples||
-|SIGMOD-2015|SMiLer: A Semi-Lazy Time Series Prediction System for Sensors||
-|SIGIR-2018|A Flexible Forecasting Framework for Hiera1rchical Time Series with Seasonal Patterns: A Case Study of Web Traffic||
-|SIGIR-2018|Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks||
-|SIGIR-2018|Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model||
-|VLDB-2018|Forecasting Big Time Series: Old and New||
-|VLDB-2018|Locality-Sensitive Hashing for Earthquake Detection: A Case Study Scaling Data-Driven Science||
-|VLDB-2017|Matrix Profile IV: Using Weakly Lab1eled Time Series to Predict Outcomes||
-|VLDB-2017|Flexible Online Task Assignment in Real-Time Spatial Data||
-|VLDB-2017|A Time Machine for Information: Looking Back to Look Forward||
-|ICDT-2018|Short-Term Traffic Forecasting: A Dynamic ST-KNN Model Considering Spatial Heterogeneity and Temporal Non-Stationarity||
-|ICDM-2017|Spatio-Temporal Neural Networks for Space-Time Series Forecasting and Relations Discovery||
-|ICDM-2017|Time-Aware Latent Hierarchical Model for Predicting House Prices||
-|ICDM-2017|Autoregressive Tensor Factorization for Spatio-temporal Predictions||
-|ICDM-2017|Deep and Confident Prediction for Time Series at Uber||
-|ICDM-2017|Improving Multivariate Time Series Forecasting with Random Walks with Restarts on Causality Graphs||
-|EDBT-2018|Big Data Analytics for Time Critical Maritime and Aerial Mobility Forecasting||
-|DASFAA-2018|A Road-Aware Neural Network for Multi-step Vehicle Trajectory Prediction||
-|CIKM-2017|Coupled Sparse Matrix Factorization for Response Time Prediction in Logistics Services||
-|CIKM-2017|A Personalized Predictive Framework for Multivariate Clinical Time Series via Adaptive Model Selection||
-|CIKM-2017|A Study of Feature Construction for Text-based Forecasting of Time Series Variables||
-|CIKM-2017|Collaborative Sequence Prediction for Sequential Recommender||
-|ECML PKDD-2017|BeatLex: Summarizing and Forecasting Time Series with Patterns||
-|ECML PKDD-2017|Arbitrated Ensemble for Time Series Forecasting||
-|ECML PKDD-2017|Forecasting and Granger Modelling with Non-linear Dynamical Dependencies||
-|ECML PKDD-2017|PowerCast: Mining and Forecasting Power Grid Sequences||
-|ECML PKDD-2017|Modeling the Temporal Nature of Human Behavior for Demographics Prediction||
-|ECML PKDD-2017|Taking It for a Test Drive: A Hybrid Spatio-Temporal Model for Wildlife Poaching Prediction Evaluated Through a Controlled Field Test||
-|ECML PKDD-2017|Predicting Defective Engines using Convolutional Neural Networks on Temporal Vibration Signals||
-|ECML PKDD-2017|Usefulness of Unsupervised Ensemble Learning Methods for Time Series Forecasting of Aggregated or Clustered Load||
-|ICDE-2017|Prediction-Based Task Assignment in Spatial Crowdsourcing. 997-1008||
-|ICDE-2017|Discovering interpretable geo-social communities for user behavior prediction. 942-953||
-|ICDE-2016|Link prediction in graph streams. 553-564||
-|ICDE-2015|Searchlight: Context-aware predictive Continuous Querying of moving objects in symbolic space. 687-698||
-|ICDE-2015|Predictive tree: An efficient index for predictive queries on road networks. 1215-1226||
+|Source|Title|Classification|Notes|
+|---|---|---|---|
+|SIGKDD-2017|Incremental Dual-memory LSTM in Land Cover Prediction|新方法||
+|SIGKDD-2017|Mixture Factorized Ornstein-Uhlenbeck Processes for Time-Series Forecasting|新问题|stock prices & sensor streams；AR model with IID Gaussian distribution to simulate the white noises that drive the diffusion of target data -> Brownian motion -> OU process & SDE (continuous-time domain) ->mixture of evolving factors over time, no single one that would presistently drive the time series through time|
+|SIGKDD-2017|Retrospective Higher-Order Markov Processes for User Trails|新方法||
+|SIGKDD-2017|The Simpler The Better: A Unified Approach to Predicting Original Taxi Demands on Large-Scale Online Platforms|新问题，新方法|https://www.youtube.com/watch?v=OlZhSrdU3IA ；To accurately predict UOTD while remaining flexible to scenario changes；两个paradigm: 1，复杂模型+少量features，2，简单模型+大量features。在出租车业务场景中要素经常变化，因此选择后者，transform model redesign to feature redesign，故而这篇文章的难点也就集中在feature engineering；简单的线性回归模型+两千万features+parallel and scalable的optimization technique；强调自己是一个pilot study，可以为其它类似的大规模时空预测兼准确度和灵活度需求的问题提供insights|
+|SIGKDD-2017|Stock Price Prediction via Discovering Multi-Frequency Trading Patterns|新方法||
+|SIGKDD-2017|Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks|新方法||
+|SIGKDD-2017|Tracking the Dynamics in Crowdfunding|新问题|it is a very challenging task; hierarchical time series: campaign-level dynamics and perk-level dynamics；用switching regression来解决异质性heterogeneity；感觉ad-hoc|
+|SIGKDD-2017|DeepMood: Modeling Mobile Phone Typing Dynamics for Mood Detection|新方法||
+|SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection|新问题，新方法|实验对标的方法有提到参考文献包括ETS&ARIMA；sparse and ARMA noise model如何优势互补，以及如何先时间序列分解再预测；稀疏分解出多个latent components包括trends, spikes, seasonalities，好处包括1, 分解出来的元素再用于time series forecasting and anomaly detection是有益的, 2, 很多严格的假设条件没有了从而有助于自动化而不用人工|
+|SDM-2018|StreamCast: Fast and Online Mining of Power Grid Time Sequences|新方法||
+|SDM-2018|Who will Attend This Event Together? Event Attendance Prediction via Deep LSTM Networks|新方法||
+|SIGMOD-2018|Spatiotemporal Traffic Volume Estimation Model Based on GPS Samples|新方法||
+|SIGMOD-2015|SMiLer: A Semi-Lazy Time Series Prediction System for Sensors|新方法||
+|SIGIR-2018|A Flexible Forecasting Framework for Hiera1rchical Time Series with Seasonal Patterns: A Case Study of Web Traffic|新方法||
+|SIGIR-2018|Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks|新方法||
+|SIGIR-2018|Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model|新方法||
+|VLDB-2018|Forecasting Big Time Series: Old and New|tutorial|good||
+|VLDB-2017|Matrix Profile IV: Using Weakly Lab1eled Time Series to Predict Outcomes|新问题|can we learn from the weakly labeled time series|
+|VLDB-2017|Flexible Online Task Assignment in Real-Time Spatial Data|新问题|只能说和ts prediction有点相关；Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned|
+|VLDB-2017|A Time Machine for Information: Looking Back to Look Forward|新问题|不是时间序列预测；goal of building a time machine for information that will record and preserve history accurately, and to help people “look back” and so as to “look forward”|
+|ICDT-2018|Short-Term Traffic Forecasting: A Dynamic ST-KNN Model Considering Spatial Heterogeneity and Temporal Non-Stationarity|新方法||
+|ICDM-2017|Spatio-Temporal Neural Networks for Space-Time Series Forecasting and Relations Discovery|新方法||
+|ICDM-2017|Time-Aware Latent Hierarchical Model for Predicting House Prices|新方法||
+|ICDM-2017|Autoregressive Tensor Factorization for Spatio-temporal Predictions|新方法||
+|ICDM-2017|Deep and Confident Prediction for Time Series at Uber|新方法||
+|ICDM-2017|Improving Multivariate Time Series Forecasting with Random Walks with Restarts on Causality Graphs|新方法||
+|EDBT-2018|Big Data Analytics for Time Critical Maritime and Aerial Mobility Forecasting|新问题|userdefined challenges in the air-traffic management and maritime domains|
+|DASFAA-2018|A Road-Aware Neural Network for Multi-step Vehicle Trajectory Prediction|新方法||
+|CIKM-2017|Coupled Sparse Matrix Factorization for Response Time Prediction in Logistics Services|新方法||
+|CIKM-2017|A Personalized Predictive Framework for Multivariate Clinical Time Series via Adaptive Model Selection|新方法||
+|CIKM-2017|A Study of Feature Construction for Text-based Forecasting of Time Series Variables|新方法||
+|CIKM-2017|Collaborative Sequence Prediction for Sequential Recommender|新方法||
+|ECML PKDD-2017|BeatLex: Summarizing and Forecasting Time Series with Patterns|新方法||
+|ECML PKDD-2017|Arbitrated Ensemble for Time Series Forecasting|新方法||
+|ECML PKDD-2017|Forecasting and Granger Modelling with Non-linear Dynamical Dependencies|新方法||
+|ECML PKDD-2017|PowerCast: Mining and Forecasting Power Grid Sequences|新方法||
+|ECML PKDD-2017|Modeling the Temporal Nature of Human Behavior for Demographics Prediction|新方法||
+|ECML PKDD-2017|Taking It for a Test Drive: A Hybrid Spatio-Temporal Model for Wildlife Poaching Prediction Evaluated Through a Controlled Field Test|新方法||
+|ECML PKDD-2017|Predicting Defective Engines using Convolutional Neural Networks on Temporal Vibration Signals|新方法||
+|ECML PKDD-2017|Usefulness of Unsupervised Ensemble Learning Methods for Time Series Forecasting of Aggregated or Clustered Load|新方法||
+|ICDE-2017|Prediction-Based Task Assignment in Spatial Crowdsourcing. 997-1008|新方法||
+|ICDE-2017|Discovering interpretable geo-social communities for user behavior prediction. 942-953|新方法||
+|ICDE-2016|Link prediction in graph streams. 553-564|新方法||
+|ICDE-2015|Searchlight: Context-aware predictive Continuous Querying of moving objects in symbolic space. 687-698|新方法||
+|ICDE-2015|Predictive tree: An efficient index for predictive queries on road networks. 1215-1226|新方法||
 
 ## Task 6 anomaly detection (26+)
 
@@ -308,6 +358,7 @@
 |SDM-2018|Outlier Detection over Distributed Trajectory Streams||
 |ICDM-2017|Matrix Profile VII: Time Series Chains: A New Primitive for Time Series Data Mining (Best Student Paper Award)||
 |ICDM-2017|Dependency Anomaly Detection for Heterogeneous Time Series: A Granger-Lasso Approach||
+|ICDM-2017|Deep and Confident Prediction for Time Series at Uber|新方法|
 |CIKM-2017|Efficient Discovery of Abnormal Event Sequences in Enterprise Security Systems||
 |CIKM-2017|Anomaly Detection in Dynamic Networks using Multi-view Time-Series Hypersphere Learning||
 |ECML PKDD-2017|UAPD: Predicting Urban Anomalies from Spatial-Temporal Data||
