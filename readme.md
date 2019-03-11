@@ -70,16 +70,23 @@
 * 更准确地刻画数据的动态特性（a more accurate characterization of data dynamics）
     - 捕捉隐藏因素的时变模式（capturing evolution patterns of hidden factors）AR model with IID Gaussian distribution to simulate the white noises that drive the diffusion of target data -> Brownian motion -> OU process & SDE (continuous-time domain) ->mixture of evolving factors over time, no single one that would presistently drive the time series through time
 * 数据类型：时空数据（Space-Time series forecasting / Time series exhibiting spatial dependencies / spatial temporal）
-    - 工业大规模时空预测问题，兼具准确性和灵活度要求（ industrial large-scale spatio-temporal prediction problems with both accuracy and flexibility requirements）。以大规模在线出租车行业为例（large-scale online taxicab industries），预测UOTD的方法，在精确度要求之外还要求有足够的灵活度，以应对该行业经常性的政策规范或商业战略的变化。（predict the Unit Original Taxi Demand (UOTD), which refers to the number of taxi-calling requirements submitted per unit time (e.g., every hour) and per unit region (e.g., each POI). In the fast-developing online taxicab industry, application and key factor changes due to new regulations or business strategies are common and frequent. ）两个范式：（1)复杂模型+少量features，（2）简单模型+大量features。To accurately predict UOTD while remaining flexible to scenario changes，选择（2）。
+    - 工业大规模时空预测问题，兼具准确性和灵活度要求（ industrial large-scale spatio-temporal prediction problems with both accuracy and flexibility requirements）。大规模在线出租车行业（large-scale online taxicab industries），预测UOTD，在精确度要求之外还要求有足够的灵活度，以应对该行业经常性的政策规范或商业战略的变化。（predict the Unit Original Taxi Demand (UOTD), which refers to the number of taxi-calling requirements submitted per unit time (e.g., every hour) and per unit region (e.g., each POI). In the fast-developing online taxicab industry, application and key factor changes due to new regulations or business strategies are common and frequent. ）两个范式：（1）复杂模型+少量features，（2）简单模型+大量features。To accurately predict UOTD while remaining flexible to scenario changes，选择（2）。
 * 领域强相关
     - 基于电子病历的诊断预测（diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data）。两点挑战：电子病历序列数据中的时变和高维特性；预测结果的可解释性（The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.）
     - 众筹任务动态的追踪和预测，而不是只预测众筹是否成功的一个最后结果。（Tracking and forecasting the dynamics in crowdfunding instead of a final result; A special goal is to forecast the funding amount for a given campaign and its perks in the future days）
     - 空中和海上交通移动实体的事件及轨迹的实时检测和预测问题（real-time detection and prediction of events and trajectories over multiple heterogeneous, voluminous, fluctuating, and noisy data streams of moving entities in aerial and maritime transportation）
     - 用线下预测来辅助在线任务分配。Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned
+     - 车辆轨迹多步预测（multi-step vehicle trajectory prediction）
+        + 意义：有利于location-based services，并且比一步预测更好
+        + 难点：当新模式出现或者历史轨迹不完整（when new patterns appear or the previous trajectory is incomplete）
+        + 方法：feature engineering，利用道路内(intra-road)和道路间(inter-road)特征(road-aware features)
 * 放松限制性假设（relax restrictive assumptions），减少人工干预，提高自动化（perform anomaly detection and forecasting robustly without human intervention / automated algorithm for anomaly detection and/or forecasting）
     - 常见的限制性假设包括数据的周期性已知、无异常（尖峰或水平变化）窗口存在，然后人工地把这些先验知识加到异常监测和预测系统中。放松这些假设的一个方法：sparse decomposition model + ARMA noise model: jointly estimating the latent components (viz. seasonality, level changes, and spikes) in the observed time series without assuming the availability of anomaly-free time windows. 
 * 在线或流数据场景（online or streaming setting）
-* 预测变量/特征的选择（constructing a set of predictor variables that can be used in a forecast model / multivariate time series forecasting）
+* 预测变量/特征的选择 feature engineering（constructing a set of predictor variables that can be used in a forecast model / multivariate time series forecasting）
+* 从一个or一堆时间序列学习
+    - clinical time series preditcion: population models vs patient-specific models; the adaptive model switching approach
+    - collaborative sequence prediction problem: Taking the correlation between users’ behavior sequences into account, we frame the sequential recommendation as the collaborative sequence prediction problem.
 
 ## anomaly detection
 * 传统的异常检测都是基于“点”的，如何对于“异常片段”进行度量？本文介绍了一种新的measurement。
@@ -275,37 +282,37 @@
 
 |Source|Title|Classification|Notes|
 |---|---|---|---|
-|SIGKDD-2017|Incremental Dual-memory LSTM in Land Cover Prediction|新方法||
-|SIGKDD-2017|Mixture Factorized Ornstein-Uhlenbeck Processes for Time-Series Forecasting|新问题|stock prices & sensor streams；AR model with IID Gaussian distribution to simulate the white noises that drive the diffusion of target data -> Brownian motion -> OU process & SDE (continuous-time domain) ->mixture of evolving factors over time, no single one that would presistently drive the time series through time|
-|SIGKDD-2017|Retrospective Higher-Order Markov Processes for User Trails|新方法||
+|SIGKDD-2017|Incremental Dual-memory LSTM in Land Cover Prediction|新方法|技术上是时间序列分类，用分类来做预测，预测结果是categorical variable。和传统分类问题相比，land cover prediction的三点数据异质性挑战：（1）空间局部性，（2）时变性，（3）突变不可知zero-shot|
+|SIGKDD-2017|Mixture Factorized Ornstein-Uhlenbeck Processes for Time-Series Forecasting|新问题|stock prices & sensor streams；AR model with IID Gaussian distribution to simulate the white noises that drive the diffusion of target data -> Brownian motion -> OU process & SDE (continuous-time domain) ->mixture of evolving factors over time, no single one that would presistently drive the time series through time；stock prices & sensor streams；related提到三种AR变种方法直接处理非平稳时间序列|
+|SIGKDD-2017|Retrospective Higher-Order Markov Processes for User Trails|新方法|user trails；一阶和高阶MC，bias&variance，一阶不如高阶，而高阶有三点问题：（1）参数数量与阶次呈指数比，（2）参数多相应需要的训练数据也指数增加，（3）历史数据长度参数m不好确定，m定得过大容易过拟合，模型复杂泛化能力差不可信；a simplied, special case of a higher-order Markov chain，a low-parameter model；预测准确度对标higher-order Markov chains & Kneser-Ney regularization & tensor factorizations；训练过程可以并行|
 |SIGKDD-2017|The Simpler The Better: A Unified Approach to Predicting Original Taxi Demands on Large-Scale Online Platforms|新问题，新方法|https://www.youtube.com/watch?v=OlZhSrdU3IA ；To accurately predict UOTD while remaining flexible to scenario changes；两个paradigm: 1，复杂模型+少量features，2，简单模型+大量features。在出租车业务场景中要素经常变化，因此选择后者，transform model redesign to feature redesign，故而这篇文章的难点也就集中在feature engineering；简单的线性回归模型+两千万features+parallel and scalable的optimization technique；强调自己是一个pilot study，可以为其它类似的大规模时空预测兼准确度和灵活度需求的问题提供insights|
-|SIGKDD-2017|Stock Price Prediction via Discovering Multi-Frequency Trading Patterns|新方法||
-|SIGKDD-2017|Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks|新问题，新方法|基于电子病历的诊断预测（diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data）。两点挑战：电子病历序列数据中的时变和高维特性；预测结果的可解释性（The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.）|
-|SIGKDD-2017|Tracking the Dynamics in Crowdfunding|新问题|it is a very challenging task; hierarchical time series: campaign-level dynamics and perk-level dynamics；用switching regression来解决异质性heterogeneity；感觉ad-hoc|
-|SIGKDD-2017|DeepMood: Modeling Mobile Phone Typing Dynamics for Mood Detection|新方法||
-|SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection|新问题，新方法|实验对标的方法有提到参考文献包括ETS&ARIMA；sparse and ARMA noise model如何优势互补，以及如何先时间序列分解再预测；稀疏分解出多个latent components包括trends, spikes, seasonalities，好处包括1, 分解出来的元素再用于time series forecasting and anomaly detection是有益的, 2, 很多严格的假设条件没有了从而有助于自动化而不用人工|
-|SDM-2018|StreamCast: Fast and Online Mining of Power Grid Time Sequences|新方法||
-|SDM-2018|Who will Attend This Event Together? Event Attendance Prediction via Deep LSTM Networks|新方法||
-|SIGMOD-2018|Spatiotemporal Traffic Volume Estimation Model Based on GPS Samples|新方法||
-|SIGMOD-2015|SMiLer: A Semi-Lazy Time Series Prediction System for Sensors|新方法||
-|SIGIR-2018|A Flexible Forecasting Framework for Hiera1rchical Time Series with Seasonal Patterns: A Case Study of Web Traffic|新方法||
-|SIGIR-2018|Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks|新方法||
-|SIGIR-2018|Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model|新方法||
+|SIGKDD-2017|Stock Price Prediction via Discovering Multi-Frequency Trading Patterns|新方法|a novel State Frequency Memory (SFM) recurrent network to capture the multi-frequency trading patterns from past market data to make long and short term predictions over time；受DFT和LSTM的启发；第一个这样做的，novel|
+|SIGKDD-2017|Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks|新问题，新方法|基于电子病历的诊断预测（diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data）。两点挑战：（1）电子病历序列数据中的时变和高维特性，（2)预测结果的可解释性（The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.）|
+|SIGKDD-2017|Tracking the Dynamics in Crowdfunding|新问题|hierarchical time series: campaign-level dynamics and perk-level dynamics；用switching regression来解决异质性heterogeneity；感觉ad-hoc|
+|SIGKDD-2017|DeepMood: Modeling Mobile Phone Typing Dynamics for Mood Detection|新方法|验证了用移动手机对话情景下的按键动态数据来评估预测情绪障碍、严重程度的方法的可行性|
+|SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection|新问题，新方法|sparse decomposition and ARMA noise model优势互补；latent components包括trends, spikes, seasonalities；好处包括（1）先时间序列分解，有利于后续的异常监测和预测，（2)放宽限制性条件从而有助于算法自动化而不用人工干预；实验对标的方法包括ETS&ARIMA|
+|SDM-2018|StreamCast: Fast and Online Mining of Power Grid Time Sequences|新方法|建模和预测; physics-based model有利于推理; online or streaming setting|
+|SDM-2018|Who will Attend This Event Together? Event Attendance Prediction via Deep LSTM Networks|新方法|feature engineering，人工分析抽取了三种特征：semantic, temporal, spatial|
+|SIGMOD-2018|Spatiotemporal Traffic Volume Estimation Model Based on GPS Samples|新方法|real time volumn estimation/traffic monitoring；两种数据：（1）静态的专门安装的传感器，（2）Probe Vehicle Data (PVD) "水流中的软木塞”；这两种数据可以看成是accuracy和flexibility的trade off：（1）能准确的测量traffic flow，但是只能覆盖固定的地点，并且传感器unreliable，数据缺失，（2）测的是vehicle flow，不能得到准确的交通流，但是它有足够的覆盖度/ubiquitous；本文重点是把两种数据结合起来实现bridge the gap。|
+|SIGMOD-2015|SMiLer: A Semi-Lazy Time Series Prediction System for Sensors|新方法|a new method to apply the GP for sensor time series prediction；不在全部数据上训练高斯过程，而是结合query对应的一小部分数据来构造|
+|SIGIR-2018|A Flexible Forecasting Framework for Hiera1rchical Time Series with Seasonal Patterns: A Case Study of Web Traffic|新方法|a new flexible framework for hierarchical time series (HTS) forecasting|
+|SIGIR-2018|Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks|新方法|机器学习，多变量时间序列预测问题；CNN+RNN；related提到用AR模型来解决神经网络模型的scale insensitive问题|
+|SIGIR-2018|Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model|新方法|第一个用LSTM来预测点击率；an Externality-aware Model: considers user browsing behavior and the impact of top ads quality to the current one|
 |VLDB-2018|Forecasting Big Time Series: Old and New|tutorial|good||
-|VLDB-2017|Flexible Online Task Assignment in Real-Time Spatial Data|新问题|只能说和ts prediction有点相关；Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned|
+|VLDB-2017|Flexible Online Task Assignment in Real-Time Spatial Data|新问题|不是时间序列预测，只是有点相关；Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned|
 |VLDB-2017|A Time Machine for Information: Looking Back to Look Forward|新问题|不是时间序列预测；goal of building a time machine for information that will record and preserve history accurately, and to help people “look back” and so as to “look forward”|
-|ICDT-2018|Short-Term Traffic Forecasting: A Dynamic ST-KNN Model Considering Spatial Heterogeneity and Temporal Non-Stationarity|新方法||
-|ICDM-2017|Spatio-Temporal Neural Networks for Space-Time Series Forecasting and Relations Discovery|新方法||
+|ICDT-2018|Short-Term Traffic Forecasting: A Dynamic ST-KNN Model Considering Spatial Heterogeneity and Temporal Non-Stationarity|新方法|accurate and robust short-term traffic forecasting|
+|ICDM-2017|Spatio-Temporal Neural Networks for Space-Time Series Forecasting and Relations Discovery|新方法|forecasting time series of spatial processes, i.e. series of observations sharing temporal and spatial dependencies；时空时间序列经典领域：epidemiology, geo-spatial statistics and car-traffic prediction|
 |ICDM-2017|Time-Aware Latent Hierarchical Model for Predicting House Prices|新方法||
-|ICDM-2017|Autoregressive Tensor Factorization for Spatio-temporal Predictions|新方法||
-|ICDM-2017|Deep and Confident Prediction for Time Series at Uber|新方法||
-|ICDM-2017|Improving Multivariate Time Series Forecasting with Random Walks with Restarts on Causality Graphs|新方法||
+|ICDM-2017|Autoregressive Tensor Factorization for Spatio-temporal Predictions|新方法|侧重空间预测predict unknown locations|
+|ICDM-2017|Deep and Confident Prediction for Time Series at Uber|新方法|Accurate time series forecasting and reliable estimation of the prediction uncertainty|
+|ICDM-2017|Improving Multivariate Time Series Forecasting with Random Walks with Restarts on Causality Graphs|新方法|feature engineering, feature selection methods; constructing a set of predictor variables that can be used in a forecast model is one of the greatest challenges in forecasting|
 |EDBT-2018|Big Data Analytics for Time Critical Maritime and Aerial Mobility Forecasting|新问题|userdefined challenges in the air-traffic management and maritime domains|
-|DASFAA-2018|A Road-Aware Neural Network for Multi-step Vehicle Trajectory Prediction|新方法||
-|CIKM-2017|Coupled Sparse Matrix Factorization for Response Time Prediction in Logistics Services|新方法||
-|CIKM-2017|A Personalized Predictive Framework for Multivariate Clinical Time Series via Adaptive Model Selection|新方法||
-|CIKM-2017|A Study of Feature Construction for Text-based Forecasting of Time Series Variables|新方法||
-|CIKM-2017|Collaborative Sequence Prediction for Sequential Recommender|新方法||
+|DASFAA-2018|A Road-Aware Neural Network for Multi-step Vehicle Trajectory Prediction|新方法|multi-step vehicle trajectory prediction task; feature engineering: RA-LSTM: a neural network model (LSTM) combining road-aware features|
+|CIKM-2017|Coupled Sparse Matrix Factorization for Response Time Prediction in Logistics Services|新方法|不算时间序列预测，是预测，是物流业务相关的response time predition|
+|CIKM-2017|A Personalized Predictive Framework for Multivariate Clinical Time Series via Adaptive Model Selection|新问题，新方法|the adaptive model switching approach；population-based & individual-specific model|
+|CIKM-2017|A Study of Feature Construction for Text-based Forecasting of Time Series Variables|新方法|feature engineering, 设计新的feature用于预测任务；股票市场预测&新闻中提取的话题特征|
+|CIKM-2017|Collaborative Sequence Prediction for Sequential Recommender|新方法|collaborative sequence prediction problem; the correlation between users’ behavior sequences instead of independence assumption|
 |ECML PKDD-2017|BeatLex: Summarizing and Forecasting Time Series with Patterns|新方法||
 |ECML PKDD-2017|Arbitrated Ensemble for Time Series Forecasting|新方法||
 |ECML PKDD-2017|Forecasting and Granger Modelling with Non-linear Dynamical Dependencies|新方法||
