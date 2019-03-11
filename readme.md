@@ -57,6 +57,7 @@
 * 分布式的滑动窗口中近似矩阵计算 (几乎新问题)
 * 随机长度直方图化流的子序列匹配
 * 对轨迹做逆KNN
+* 用弱标记的事件序列来预测（Using Weakly Labeled Time Series to Predict Outcomes）
 
 ## classfication
 注：时间序列分类是一个定义比较明确的问题，由此衍生出完全新问题的可能性很小。有些所谓的新问题只是在特定领域的运用。
@@ -66,17 +67,19 @@
 * 用TSC解决goog abandonment
 
 ## prediction
-* a more accurate characterization of data dynamics；capturing evolution patterns of hidden factors
-* industrial large-scale spatio-temporal prediction problems with both accuracy and flexibility requirements；large-scale online taxicab industries, predict the Unit Original Taxi Demand (UOTD), which refers to the number of taxi-calling requirements submitted per unit time (e.g., every hour) and per unit region (e.g., each POI); To accurately predict UOTD while remaining flexible to scenario changes: In the fast-developing online taxicab industry, application and key factor changes due to new regulations or business strategies are common and frequent.
-* diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data; The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.
-* Tracking and forecasting the dynamics in crowdfunding instead of a final result; A special goal is to forecast the funding amount for a given campaign and its perks in the future days
-* perform anomaly detection and forecasting robustly without human intervention / automated algorithm for anomaly detection and/or forecasting; relax restrictive assumptions
-* online or streaming setting
-* Using Weakly Labeled Time Series to Predict Outcomes
-* Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned
-* Space-Time series forecasting / Time series exhibiting spatial dependencies / spatial temporal
-* constructing a set of predictor variables that can be used in a forecast model / multivariate time series forecasting
-* detection and prediction of events and trajectories in aerial and maritime transportation
+* 更准确地刻画数据的动态特性（a more accurate characterization of data dynamics）
+    - 捕捉隐藏因素的时变模式（capturing evolution patterns of hidden factors）AR model with IID Gaussian distribution to simulate the white noises that drive the diffusion of target data -> Brownian motion -> OU process & SDE (continuous-time domain) ->mixture of evolving factors over time, no single one that would presistently drive the time series through time
+* 数据类型：时空数据（Space-Time series forecasting / Time series exhibiting spatial dependencies / spatial temporal）
+    - 工业大规模时空预测问题，兼具准确性和灵活度要求（ industrial large-scale spatio-temporal prediction problems with both accuracy and flexibility requirements）。以大规模在线出租车行业为例（large-scale online taxicab industries），预测UOTD的方法，在精确度要求之外还要求有足够的灵活度，以应对该行业经常性的政策规范或商业战略的变化。（predict the Unit Original Taxi Demand (UOTD), which refers to the number of taxi-calling requirements submitted per unit time (e.g., every hour) and per unit region (e.g., each POI). In the fast-developing online taxicab industry, application and key factor changes due to new regulations or business strategies are common and frequent. ）两个范式：（1)复杂模型+少量features，（2）简单模型+大量features。To accurately predict UOTD while remaining flexible to scenario changes，选择（2）。
+* 领域强相关
+    - 基于电子病历的诊断预测（diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data）。两点挑战：电子病历序列数据中的时变和高维特性；预测结果的可解释性（The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.）
+    - 众筹任务动态的追踪和预测，而不是只预测众筹是否成功的一个最后结果。（Tracking and forecasting the dynamics in crowdfunding instead of a final result; A special goal is to forecast the funding amount for a given campaign and its perks in the future days）
+    - 空中和海上交通移动实体的事件及轨迹的实时检测和预测问题（real-time detection and prediction of events and trajectories over multiple heterogeneous, voluminous, fluctuating, and noisy data streams of moving entities in aerial and maritime transportation）
+    - 用线下预测来辅助在线任务分配。Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned
+* 放松限制性假设（relax restrictive assumptions），减少人工干预，提高自动化（perform anomaly detection and forecasting robustly without human intervention / automated algorithm for anomaly detection and/or forecasting）
+    - 常见的限制性假设包括数据的周期性已知、无异常（尖峰或水平变化）窗口存在，然后人工地把这些先验知识加到异常监测和预测系统中。放松这些假设的一个方法：sparse decomposition model + ARMA noise model: jointly estimating the latent components (viz. seasonality, level changes, and spikes) in the observed time series without assuming the availability of anomaly-free time windows. 
+* 在线或流数据场景（online or streaming setting）
+* 预测变量/特征的选择（constructing a set of predictor variables that can be used in a forecast model / multivariate time series forecasting）
 
 ## anomaly detection
 * 传统的异常检测都是基于“点”的，如何对于“异常片段”进行度量？本文介绍了一种新的measurement。
@@ -217,6 +220,7 @@
 |ICDE-2017|ACTS: An Active Learning Method for Time Series Classification|几乎新问题（2）：对TSC使用AL|
 |ICDE-2017|Time Series Classification by Sequence Learning in All-Subsequence Space|新方法：在子序列空间中使用梯度下降找到最具区分力的子序列|
 |VLDB-2017|Effects of Varying Sampling Frequency on the Analysis of Continuous ECG Data Streams|新方法|
+|VLDB-2017|Matrix Profile IV: Using Weakly Lab1eled Time Series to Predict Outcomes|新问题|can we learn from the weakly labeled time series|
 |SDM-2018|Interpretable Categorization of Heterogeneous Time Series Data|新方法：使用扩展的决策树|
 |SDM-2018|Evolving Separating References for Time Series Classification|新方法|
 |SDM-2018|Classifying Multivariate Time Series by Learning Sequence-level Discriminative Patterns|新方法|
@@ -276,7 +280,7 @@
 |SIGKDD-2017|Retrospective Higher-Order Markov Processes for User Trails|新方法||
 |SIGKDD-2017|The Simpler The Better: A Unified Approach to Predicting Original Taxi Demands on Large-Scale Online Platforms|新问题，新方法|https://www.youtube.com/watch?v=OlZhSrdU3IA ；To accurately predict UOTD while remaining flexible to scenario changes；两个paradigm: 1，复杂模型+少量features，2，简单模型+大量features。在出租车业务场景中要素经常变化，因此选择后者，transform model redesign to feature redesign，故而这篇文章的难点也就集中在feature engineering；简单的线性回归模型+两千万features+parallel and scalable的optimization technique；强调自己是一个pilot study，可以为其它类似的大规模时空预测兼准确度和灵活度需求的问题提供insights|
 |SIGKDD-2017|Stock Price Prediction via Discovering Multi-Frequency Trading Patterns|新方法||
-|SIGKDD-2017|Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks|新方法||
+|SIGKDD-2017|Dipole: Diagnosis Prediction in Healthcare via Attention-based Bidirectional Recurrent Neural Networks|新问题，新方法|基于电子病历的诊断预测（diagonosis prediction: to predict the future diagnoses based on patient’s historical EHR data）。两点挑战：电子病历序列数据中的时变和高维特性；预测结果的可解释性（The most important challenges for this task are 1, to model the temporality and high dimensionality of sequential EHR data and 2, to interpret the prediction results.）|
 |SIGKDD-2017|Tracking the Dynamics in Crowdfunding|新问题|it is a very challenging task; hierarchical time series: campaign-level dynamics and perk-level dynamics；用switching regression来解决异质性heterogeneity；感觉ad-hoc|
 |SIGKDD-2017|DeepMood: Modeling Mobile Phone Typing Dynamics for Mood Detection|新方法||
 |SDM-2018|Sparse Decomposition for Time Series Forecasting and Anomaly Detection|新问题，新方法|实验对标的方法有提到参考文献包括ETS&ARIMA；sparse and ARMA noise model如何优势互补，以及如何先时间序列分解再预测；稀疏分解出多个latent components包括trends, spikes, seasonalities，好处包括1, 分解出来的元素再用于time series forecasting and anomaly detection是有益的, 2, 很多严格的假设条件没有了从而有助于自动化而不用人工|
@@ -288,7 +292,6 @@
 |SIGIR-2018|Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks|新方法||
 |SIGIR-2018|Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model|新方法||
 |VLDB-2018|Forecasting Big Time Series: Old and New|tutorial|good||
-|VLDB-2017|Matrix Profile IV: Using Weakly Lab1eled Time Series to Predict Outcomes|新问题|can we learn from the weakly labeled time series|
 |VLDB-2017|Flexible Online Task Assignment in Real-Time Spatial Data|新问题|只能说和ts prediction有点相关；Flexible Two-sided Online task Assignment (FTOA), a new problem of online task assignment in real-time spatial data that is fit for practical O2O applications where workers are allowed to move around if no task is assigned|
 |VLDB-2017|A Time Machine for Information: Looking Back to Look Forward|新问题|不是时间序列预测；goal of building a time machine for information that will record and preserve history accurately, and to help people “look back” and so as to “look forward”|
 |ICDT-2018|Short-Term Traffic Forecasting: A Dynamic ST-KNN Model Considering Spatial Heterogeneity and Temporal Non-Stationarity|新方法||
